@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an issue with unexpected behavior when using the `calc()` function with percentages and `vh` units:
+
+```css
+.container {
+  width: calc(50% - 10vh);
+}
+```
+
+This code intends to make the container's width 50% of its parent's width, minus 10vh (viewport height). However, the `calc()` function might not behave as expected due to unit mixing.  Some browsers might not correctly interpret the subtraction of a `vh` unit from a percentage unit.
