@@ -1,0 +1,17 @@
+A more reliable approach is to avoid mixing percentage and `vh` units within the `calc()` function. Instead, consider using media queries to adjust the width based on different viewport sizes or using JavaScript to dynamically calculate the width. Here's an example of a media query solution:
+
+```css
+@media (min-height: 600px) {
+  .container {
+    width: calc(50% - 100px);
+  }
+}
+
+@media (min-height: 700px) {
+  .container {
+    width: calc(50% - 150px);
+  }
+}
+```
+
+This solution adjusts the width based on the viewport height using media queries which is a common workaround for such compatibility issues.
